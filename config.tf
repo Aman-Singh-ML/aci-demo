@@ -11,3 +11,7 @@ terraform {
 resource "aci_tenant" "aci_demo" {
   name        = "aci_demo"    
 }
+
+resource "aci_tenant" "aci_demo2" {
+  name        = "aci_demo2"
+}
