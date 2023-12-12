@@ -1,7 +1,13 @@
+provider "aci" {
+  username = "admin"
+  password = "C1sco12345"
+  url      = "https://apic1.dcloud.cisco.com/"
+  insecure = true
+}
+
 resource "aci_tenant" "aci_tenant" {
   name        = var.name
   description = var.description
-  display_name = var.display_name
   
   # Other fields and configurations for the tenant resource...
 

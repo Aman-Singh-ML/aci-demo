@@ -9,9 +9,8 @@ terraform {
 }
 
 module "aci_tenant" {
-  source = "./tenant"
+  source = "./aci_tenant_module"
 
   name         = "my_tenant"
   description  = "This is my tenant"
-  display_name = "My Tenant"
 }
