@@ -8,10 +8,10 @@ terraform {
   }
 }
 
-resource "aci_tenant" "aci_demo" {
-  name        = "aci_demo"    
-}
+module "aci_tenant" {
+  source = "./tenant"
 
-resource "aci_tenant" "aci_demo2" {
-  name        = "aci_demo2"
+  name         = "my_tenant"
+  description  = "This is my tenant"
+  display_name = "My Tenant"
 }
