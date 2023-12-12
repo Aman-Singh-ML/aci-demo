@@ -8,9 +8,23 @@ terraform {
   }
 }
 
-module "aci_tenant" {
-  source = "./aci_tenant_module"
+# Create VLAN Pool
 
-  name         = "my_tenant"
-  description  = "This is my tenant"
+module "vlan_pool" {
+  source = "./aci_vlan_pool/vlan_pool"
+
+  name         = "test_vlan"
+  alloc_mode  = "static"
+}
+
+module "vlan_pool_range" {
+  source = "./aci_vlan_pool/vlan_pool_range"
+
+  vlan_pool_id = module.vlan-pool.id
+  alloc_mode   = "static"
+  role         = "external"
+  from         = "vlan-100"
+  to           = "vlan-150"
+
+  depends_on = [module.vlan_pool]
 }
