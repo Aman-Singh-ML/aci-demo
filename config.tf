@@ -20,7 +20,7 @@ module "vlan_pool" {
 module "vlan_pool_range" {
   source = "./aci_vlan_pool/vlan_pool_range"
 
-  vlan_pool_id = module.vlan-pool.id
+  vlan_pool_id = module.vlan_pool.id
   alloc_mode   = "static"
   role         = "external"
   from         = "vlan-100"
