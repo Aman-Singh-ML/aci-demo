@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"tenants","Source":"./AllTenants/Tenant1","Dir":"AllTenants/Tenant1"},{"Key":"tenants.Tenant1","Source":"../../../aci_tenant","Dir":"../aci_tenant"}]}

@@ -21,3 +21,10 @@ resource "aci_tenant" "aci_tenant" {
   
   # Other fields and configurations for the tenant resource...
 }
+
+module "Tenant1" {
+  source = "../../../aci_tenant"
+
+  name         = "test2"
+  description = "This is a test tenant created by terraform"
+}

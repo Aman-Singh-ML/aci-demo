@@ -1,4 +1,14 @@
 terraform {
+  cloud {
+    organization = "ACITest"
+
+    workspaces {
+      name = "aci-demo"
+    }
+  }
+}
+
+terraform {
   required_providers {
     aci = {
       source = "ciscodevnet/aci"
