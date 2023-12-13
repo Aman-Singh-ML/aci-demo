@@ -28,3 +28,4 @@ module "vlan_pool_range" {
 
   depends_on = [module.vlan_pool]
 }
+
