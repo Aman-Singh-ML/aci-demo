@@ -15,16 +15,9 @@ provider "aci" {
   insecure = true
 }
 
-resource "aci_tenant" "aci_tenant" {
-  name        = "test"
-  description = "This is a test tenant created by terraform"
-  
-  # Other fields and configurations for the tenant resource...
-}
-
 module "Tenant1" {
-  source = "../../../aci_tenant"
+  source = "../../../aci_sdk/aci_tenant"
 
-  name         = "test2"
+  name         = "tenant1"
   description = "This is a test tenant created by terraform"
 }

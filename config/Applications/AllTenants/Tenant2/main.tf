@@ -1,14 +1,4 @@
 terraform {
-  cloud {
-    organization = "ACITest"
-
-    workspaces {
-      name = "aci-demo"
-    }
-  }
-}
-
-terraform {
   required_providers {
     aci = {
       source = "ciscodevnet/aci"
@@ -25,6 +15,9 @@ provider "aci" {
   insecure = true
 }
 
-module "tenants" {
-  source = "./Fabric/AllTenants/Tenant1"
+module "Tenant2" {
+  source = "../../../aci_sdk/aci_tenant"
+
+  name         = "tenant2"
+  description = "This is a test tenant created by terraform"
 }

@@ -1,14 +1,4 @@
 terraform {
-  cloud {
-    organization = "ACITest"
-
-    workspaces {
-      name = "aci-demo"
-    }
-  }
-}
-
-terraform {
   required_providers {
     aci = {
       source = "ciscodevnet/aci"
@@ -25,6 +15,7 @@ provider "aci" {
   insecure = true
 }
 
-module "tenants" {
-  source = "./Fabric/AllTenants/Tenant1"
+resource "aci_physical_domain" "aci_physical_domain" {
+  name        = var.name
+  relation_infra_rs_vlan_ns = var.vlan_pool_id
 }
