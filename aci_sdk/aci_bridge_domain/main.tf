@@ -15,13 +15,7 @@ provider "aci" {
   insecure = true
 }
 
-module "demo" {
-  source = "../../../aci_sdk/aci_tenant"
-
-  name         = "demo"
-  description = "This is a Demo tenant created by terraform"
-}
-
-output "demo_id" {
-  value = module.demo.id
+resource "aci_bridge_domain" "aci_bridge_domain" {
+  name       = var.name
+  tenant_dn = var.tenant_id
 }

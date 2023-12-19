@@ -9,9 +9,9 @@ terraform {
 }
 
 # Create CDP Policy1
-module "cdp_policy1" {
+module "cdp-enabled" {
   source = "../../../aci_sdk/aci_cdp_policy"
 
-  name      = "test_cdp_policy"
+  name      = "cdp-enabled"
   admin_st  = "enabled"
 }
