@@ -1,12 +1,3 @@
-terraform {
-  cloud {
-    organization = "ACITest"
-
-    workspaces {
-      name = "aci-demo"
-    }
-  }
-}
 
 terraform {
   required_providers {
@@ -25,11 +16,10 @@ provider "aci" {
   insecure = true
 }
 
-module "fabric" {
-  source = "./Fabric/"
+module "create_common_tenant_config" {
+  source = "./common_tenant_config"
 }
 
-module "applications" {
-  source = "./Applications/AllTenants"
+module "create_tenant1" {
+  source = "./tenant1"
 }
-

@@ -25,3 +25,15 @@ module "demo" {
 output "demo_id" {
   value = module.demo.id
 }
+
+module "create_app_profile" {
+  source = "./app_profile"
+}
+
+module "create_epgs" {
+  source = "./epgs"
+}
+
+module "create_epg_to_app_binding" {
+    source = "./epg_to_app_binding"
+}
