@@ -14,7 +14,7 @@ module "physical_servers" {
 
 # Create AAEP
 module "aaep_all_vlans" {
-    source = "../../../aci_sdk/aci_cdp_policy"
+    source = "../../../../aci_sdk/aci_cdp_policy"
 
     name       = "aaep_all_vlans"
     domain_dn  = module.physical_servers.physical_servers_id

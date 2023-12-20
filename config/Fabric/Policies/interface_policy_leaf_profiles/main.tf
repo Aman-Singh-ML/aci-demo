@@ -10,7 +10,7 @@ terraform {
 
 # Create CDP Policy1
 module "Leaf_101" {
-  source = "../../../aci_sdk/aci_leaf_interface_profile"
+  source = "../../../../aci_sdk/aci_leaf_interface_profile"
 
   name                          = "Leaf_101"
 }

@@ -21,7 +21,7 @@ output "all_vlans_id" {
 }
 
 module "all_vlans_pool_range" {
-  source = "../../../aci_sdk/aci_vlan_pool/vlan_pool_range"
+  source = "../../../../aci_sdk/aci_vlan_pool/vlan_pool_range"
 
   vlan_pool_id = module.all_vlans.id
   alloc_mode   = "static"

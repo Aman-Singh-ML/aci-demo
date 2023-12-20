@@ -14,7 +14,7 @@ module "aaep_all_vlans" {
 
 # Create CDP Policy1
 module "ESX_Hosts" {
-  source = "../../../aci_sdk/aci_leaf_access_port_policy_group"
+  source = "../../../../aci_sdk/aci_leaf_access_port_policy_group"
 
   name                          = "ESX_Hosts"
   relation_infra_rs_cdp_if_pol  = "enabled"
